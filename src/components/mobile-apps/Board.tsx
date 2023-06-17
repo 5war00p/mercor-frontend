@@ -96,8 +96,8 @@ export const Board: FC = () => {
           id="todo"
           title="To Do"
           cardCount={4}
-          separatorColor="#5030E5"
-          indicatorColor="#5030E5"
+          indicatorColor="bg-[#5030E5]"
+          separatorColor="border-[#5030E5]"
           cardProps={tasks.filter((task) => task.status === "todo")}
           changeTaskStatus={changeTaskStatus}
         />
@@ -105,8 +105,8 @@ export const Board: FC = () => {
           id="onprogress"
           title="On Progress"
           cardCount={3}
-          separatorColor="#FFA500"
-          indicatorColor="#FFA500"
+          indicatorColor="bg-[#FFA500]"
+          separatorColor="border-[#FFA500]"
           cardProps={tasks.filter((task) => task.status === "onprogress")}
           changeTaskStatus={changeTaskStatus}
         />
@@ -114,8 +114,8 @@ export const Board: FC = () => {
           id="done"
           title="Done"
           cardCount={2}
-          separatorColor="#8BC48A"
-          indicatorColor="#76A5EA"
+          separatorColor="border-[#8BC48A]"
+          indicatorColor="bg-[#76A5EA]"
           cardProps={tasks.filter((task) => task.status === "done")}
           changeTaskStatus={changeTaskStatus}
         />

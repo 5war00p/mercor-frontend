@@ -24,8 +24,6 @@ export const Column: FC<ColumnProps> = ({
   cardProps,
   changeTaskStatus,
 }) => {
-  const bulletBGColor = `bg-[${indicatorColor}]`;
-  const dividerColor = `border-[${separatorColor}]`;
   const showAddButton = title === "To Do";
 
   const ref = useRef(null);
@@ -44,7 +42,7 @@ export const Column: FC<ColumnProps> = ({
     >
       <div className="flex items-center pb-6">
         <span
-          className={`inline-block w-2 h-2 rounded-full ${bulletBGColor}`}
+          className={`inline-block w-2 h-2 rounded-full ${indicatorColor}`}
         ></span>
         <p className="ml-2 mr-3">{title}</p>
         <span className="text-center text-sm font-medium inline-block w-5 h-5 rounded-full bg-[#E0E0E0] text-[#625F6D]">
@@ -54,7 +52,7 @@ export const Column: FC<ColumnProps> = ({
           <Plus className="w-[30px] h-[30px] rounded-md ml-auto" />
         ) : null}
       </div>
-      <span className={`border-t-[3px] ${dividerColor} mb-7`}></span>
+      <span className={`border-t-[3px] ${separatorColor} mb-7`}></span>
       {cardProps?.length ? (
         <div className="flex flex-col gap-5">
           {cardProps.map((card, index) => {
