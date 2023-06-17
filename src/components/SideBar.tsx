@@ -65,7 +65,9 @@ const Sidebar: FC<{ currentPage: string }> = ({ currentPage }) => {
       <div className="flex py-8 shrink-0 items-center border-b border-[#DBDBDB] px-6">
         <Colorfilter color="#5030E5" variant="Bulk" size={"24px"} />
         <p className="ml-2 text-xl font-semibold leading-6">Project M.</p>
-        <ChevronDoubleLeft className="m-auto ml-[46px] h-5 w-5 text-[#787486]" />
+        <button onClick={() => null}>
+          <ChevronDoubleLeft className="m-auto ml-[46px] h-5 w-5 text-[#787486]" />
+        </button>
       </div>
       <nav className="flex flex-1 flex-col px-6">
         <ul role="list" className="flex flex-1 flex-col gap-y-7">
