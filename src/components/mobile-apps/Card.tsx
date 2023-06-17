@@ -1,13 +1,16 @@
-import type { FC } from "react";
+import { useRef, type FC } from "react";
 import { Badge } from "./Badge";
 import { Folder2, Message } from "iconsax-react";
 import { ThreeDots } from "../icons/ThreeDots";
+import { useDrag } from "react-dnd";
+import { ColumnType } from "./Column";
 
 type ProrityStatus = "Low" | "High" | "Completed";
 
 export interface CardProps {
   priorityStatus: ProrityStatus;
   title: string;
+  status: ColumnType;
   description?: string;
   images?: string[];
   subscriberImages: string[];
@@ -48,8 +51,30 @@ export const Card: FC<CardProps> = ({
   commentCount,
   subscriberImages,
 }) => {
+  const ref = useRef(null);
+  const [{ isDragging }, drag] = useDrag({
+    type: "card",
+    item: {
+      priorityStatus,
+      title,
+      description,
+      images,
+      fileCount,
+      commentCount,
+      subscriberImages,
+    },
+    collect: (monitor) => ({
+      isDragging: monitor.isDragging(),
+    }),
+  });
+  drag(ref);
+
   return (
-    <div className="w-[314px] flex flex-col bg-white p-5 rounded-2xl">
+    <div
+      className="w-[314px] flex flex-col bg-white p-5 rounded-2xl"
+      ref={ref}
+      style={{ opacity: isDragging ? 0.5 : 1.0 }}
+    >
       <div className="flex items-center">
         <Badge
           content={priorityStatus}

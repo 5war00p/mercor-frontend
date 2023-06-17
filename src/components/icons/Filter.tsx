@@ -15,7 +15,7 @@ export const Filter = () => {
         stroke-width="1.3"
         stroke-miterlimit="10"
         stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeLineJoin="round"
       />
     </svg>
   );

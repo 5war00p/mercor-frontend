@@ -1,29 +1,44 @@
-import type { FC } from "react";
+import { useRef, type FC } from "react";
 import { Plus } from "../icons/Plus";
 import { Card, CardProps } from "./Card";
-import { CardPos } from "iconsax-react";
+import { useDrop } from "react-dnd";
+
+export type ColumnType = "todo" | "onprogress" | "done";
 
 interface ColumnProps {
+  id: ColumnType;
   title: string;
   cardCount: number;
   separatorColor: string;
   indicatorColor: string;
   cardProps?: CardProps[];
+  changeTaskStatus: (title: string, id: ColumnType) => void;
 }
 
 export const Column: FC<ColumnProps> = ({
+  id,
   title,
   cardCount,
   separatorColor,
   indicatorColor,
   cardProps,
+  changeTaskStatus,
 }) => {
   const bulletBGColor = `bg-[${indicatorColor}]`;
   const dividerColor = `border-[${separatorColor}]`;
   const showAddButton = title === "To Do";
 
+  const ref = useRef(null);
+  const [, drop] = useDrop({
+    accept: "card",
+    drop(item) {
+      changeTaskStatus((item as unknown as CardProps).title, id);
+    },
+  });
+  drop(ref);
+
   return (
-    <div className="flex flex-col bg-[#F5F5F5] rounded-2xl p-5">
+    <div className="flex flex-col bg-[#F5F5F5] rounded-2xl p-5" ref={ref}>
       <div className="flex items-center pb-6">
         <span
           className={`inline-block w-2 h-2 rounded-full ${bulletBGColor}`}
@@ -42,7 +57,9 @@ export const Column: FC<ColumnProps> = ({
           {cardProps.map((card, index) => {
             return (
               <Card
+                key={index.toString()}
                 title={card.title}
+                status={card.status}
                 priorityStatus={card.priorityStatus}
                 description={card.description}
                 images={card.images}

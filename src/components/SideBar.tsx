@@ -123,7 +123,7 @@ const Sidebar: FC<{ currentPage: string }> = ({ currentPage }) => {
           </li>
           <li className="-mx-6 mt-auto p-5">
             <div className="relative h-[200px] rounded-2xl bg-[#F5F5F5]">
-              <div className="absolute -top-9 left-16 w-[66px] h-[66px] rounded-full bg-[#F5F5F5]">
+              <div className="absolute -top-9 left-[66px] w-[66px] h-[66px] rounded-full bg-[#F5F5F5]">
                 <div className="relative mx-auto mt-4 h-[33px] w-[33px] rounded-full bg-[#FCD64A] bg-opacity-70 blur-lg"></div>
                 <LampOn
                   className="absolute bottom-4 left-4"
