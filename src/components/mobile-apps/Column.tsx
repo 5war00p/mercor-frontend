@@ -38,7 +38,10 @@ export const Column: FC<ColumnProps> = ({
   drop(ref);
 
   return (
-    <div className="flex flex-col bg-[#F5F5F5] rounded-2xl p-5" ref={ref}>
+    <div
+      className="min-w-[355px] flex flex-col bg-[#F5F5F5] rounded-2xl p-5"
+      ref={ref}
+    >
       <div className="flex items-center pb-6">
         <span
           className={`inline-block w-2 h-2 rounded-full ${bulletBGColor}`}

@@ -12,7 +12,7 @@ import type { FC } from "react";
 import { ChevronDoubleLeft } from "./icons/ChevronDoubleLeft";
 
 const navigation = [
-  { name: "Home", href: "/clear", icon: Category, count: "5" },
+  { name: "Home", href: "/", icon: Category, count: "5" },
   {
     name: "Messages",
     href: "/messages",

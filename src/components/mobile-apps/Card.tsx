@@ -71,9 +71,10 @@ export const Card: FC<CardProps> = ({
 
   return (
     <div
-      className="w-[314px] flex flex-col bg-white p-5 rounded-2xl"
+      className={`w-[314px] flex flex-col bg-white p-5 rounded-2xl ${
+        isDragging ? "opacity-50" : "opacity-100"
+      }`}
       ref={ref}
-      style={{ opacity: isDragging ? 0.5 : 1.0 }}
     >
       <div className="flex items-center">
         <Badge

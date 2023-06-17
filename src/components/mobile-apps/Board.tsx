@@ -39,7 +39,7 @@ export const Board: FC = () => {
     },
     {
       priorityStatus: "Low",
-      title: "Brainstorming",
+      title: "Onboarding Illustrations",
       images: ["/cardImages/onprogress-1.png"],
       commentCount: 14,
       fileCount: 15,
