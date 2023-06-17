@@ -1,6 +1,7 @@
 ---
 import { Header } from "../components/mobile-apps/Header";
 import { SubHeader } from "../components/mobile-apps/SubHeader";
+import { Column } from "../components/mobile-apps/Column";
 import Base from "../layouts/Base.astro";
 ---
 
@@ -8,5 +9,25 @@ import Base from "../layouts/Base.astro";
     <div class="flex flex-col mt-[41.5px] ml-[48.5px]">
         <Header />
         <SubHeader />
+        <div class="flex space-x-[15px]">
+            <Column
+                title="To Do"
+                cardCount={4}
+                separatorColor="#5030E5"
+                indicatorColor="#5030E5"
+            />
+            <Column
+                title="On Progress"
+                cardCount={3}
+                separatorColor="#FFA500"
+                indicatorColor="#FFA500"
+            />
+            <Column
+                title="Done"
+                cardCount={2}
+                separatorColor="#8BC48A"
+                indicatorColor="#76A5EA"
+            />
+        </div>
     </div>
 </Base>
