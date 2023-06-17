@@ -1,4 +1,8 @@
 ---
+import { Header } from "../components/Header";
+import Sidebar from "../components/SideBar";
+
+const pathname = Astro.url.pathname;
 ---
 
 <!DOCTYPE html>
@@ -10,9 +14,15 @@
 		<link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Index</title>
+		<title>Project M.</title>
 	</head>
 	<body>
-		<slot />
+		<div class="flex">
+			<Sidebar currentPage={pathname} />
+			<div class="w-full">
+				<Header />
+				<slot />
+			</div>
+		</div>
 	</body>
 </html>

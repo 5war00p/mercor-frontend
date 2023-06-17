@@ -12,52 +12,46 @@ import type { FC } from "react";
 import { ChevronDoubleLeft } from "./icons/ChevronDoubleLeft";
 
 const navigation = [
-  { name: "Home", href: "#", icon: Category, count: "5", current: false },
+  { name: "Home", href: "/home", icon: Category, count: "5" },
   {
     name: "Messages",
-    href: "#",
+    href: "/messages",
     icon: Message,
     count: "12",
-    current: false,
   },
   {
     name: "Tasks",
-    href: "#",
+    href: "/tasks",
     icon: TaskSquare,
     count: "20+",
-    current: false,
   },
-  { name: "Members", href: "#", icon: Profile2User, current: false },
-  { name: "Settings", href: "#", icon: Setting2, current: false },
+  { name: "Members", href: "/members", icon: Profile2User },
+  { name: "Settings", href: "/settings", icon: Setting2 },
 ];
 const teams = [
   {
     id: 1,
     name: "Mobile App",
-    href: "#",
+    href: "/mobileApp",
     indicator: "inline-block w-2 h-2 rounded-full bg-[#7AC555]",
-    current: true,
   },
   {
     id: 2,
     name: "Website Redesign",
-    href: "#",
+    href: "/websiteRedesign",
     indicator: "inline-block w-2 h-2 rounded-full bg-[#FFA500]",
-    current: false,
   },
   {
     id: 3,
     name: "Design System",
-    href: "#",
+    href: "/designSystem",
     indicator: "inline-block w-2 h-2 rounded-full bg-[#E4CCFD]",
-    current: false,
   },
   {
     id: 3,
     name: "Wireframes",
-    href: "#",
+    href: "/wireframes",
     indicator: "inline-block w-2 h-2 rounded-full bg-[#76A5EA]",
-    current: false,
   },
 ];
 
@@ -65,7 +59,7 @@ function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(" ");
 }
 
-const Sidebar: FC = () => {
+const Sidebar: FC<{ currentPage: string }> = ({ currentPage }) => {
   return (
     <div className="max-w-[250.5px] h-full flex flex-col gap-y-5 border-r bg-white border-[#DBDBDB]">
       <div className="flex py-8 shrink-0 items-center border-b border-[#DBDBDB] px-6">
@@ -82,7 +76,7 @@ const Sidebar: FC = () => {
                   <a
                     href={item.href}
                     className={classNames(
-                      item.current
+                      currentPage === item.href
                         ? "bg-[#5030E5] bg-opacity-[0.08] text-gray-900"
                         : "text-[#787486] hover:text-gray-900 hover:bg-[#5030E5] hover:bg-opacity-[0.08]",
                       "group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-medium"
@@ -90,7 +84,7 @@ const Sidebar: FC = () => {
                   >
                     <item.icon
                       className={classNames(
-                        item.current
+                        currentPage === item.href
                           ? "text-gray-900"
                           : "text-[#787486] group-hover:text-gray-900",
                         "h-6 w-6 shrink-0"
@@ -114,7 +108,7 @@ const Sidebar: FC = () => {
                   <a
                     href={team.href}
                     className={classNames(
-                      team.current
+                      currentPage === team.href
                         ? "bg-[#5030E5] bg-opacity-[0.08] text-gray-900"
                         : "text-[#787486] hover:text-gray-900 hover:bg-[#5030E5] hover:bg-opacity-[0.08]",
                       "group flex gap-x-3 rounded-md p-2 text-sm leading-5 font-semibold items-center"
