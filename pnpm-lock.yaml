@@ -3,11 +3,11 @@ lockfileVersion: 5.4
 specifiers:
   '@astrojs/react': ^2.2.1
   '@astrojs/tailwind': ^3.1.3
-  '@heroicons/react': ^2.0.18
   '@tailwindcss/forms': ^0.5.3
   '@types/react': ^18.0.21
   '@types/react-dom': ^18.0.6
   astro: ^2.6.4
+  iconsax-react: ^0.0.8
   react: ^18.0.0
   react-dom: ^18.0.0
   tailwindcss: ^3.0.24
@@ -15,10 +15,10 @@ specifiers:
 dependencies:
   '@astrojs/react': 2.2.1_y3k2tdq7wbuzvkkbg2xqtd2ahu
   '@astrojs/tailwind': 3.1.3_ez5tr46f34xemqtmnzl54w7fmm
-  '@heroicons/react': 2.0.18_react@18.2.0
   '@types/react': 18.2.12
   '@types/react-dom': 18.2.5
   astro: 2.6.4
+  iconsax-react: 0.0.8_react@18.2.0
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
   tailwindcss: 3.3.2
@@ -598,14 +598,6 @@ packages:
     requiresBuild: true
     dev: false
     optional: true
-
-  /@heroicons/react/2.0.18_react@18.2.0:
-    resolution: {integrity: sha512-7TyMjRrZZMBPa+/5Y8lN0iyvUU/01PeMGX2+RE7cQWpEUIcb4QotzUObFkJDejj/HUH4qjP/eQ0gzzKs2f+6Yw==}
-    peerDependencies:
-      react: '>= 16'
-    dependencies:
-      react: 18.2.0
-    dev: false
 
   /@jridgewell/gen-mapping/0.3.3:
     resolution: {integrity: sha512-HLhSWOLRi875zjjMG/r+Nv0oCW8umGb0BgEhyX3dDX3egwZtB8PqLnjz3yedt8R5StBrzcg4aBpnh8UA9D1BoQ==}
@@ -1676,6 +1668,15 @@ packages:
     engines: {node: '>=14.18.0'}
     dev: false
 
+  /iconsax-react/0.0.8_react@18.2.0:
+    resolution: {integrity: sha512-l3dVk4zGtkkJHgvNYqAf0wDKqnKxXykee5/DoESGo2JvSYwaxajJUHSX2YrPRXSov8Hd8ClGFwJxCEaEjrFD1Q==}
+    peerDependencies:
+      react: '*'
+    dependencies:
+      prop-types: 15.8.1
+      react: 18.2.0
+    dev: false
+
   /ieee754/1.2.1:
     resolution: {integrity: sha512-dcyqhDvX1C46lXZcVqCpK+FtMRQVdIMN6/Df5js2zouUsqG7I6sFxitIC+7KYK29KdXOLHdu9zL4sFnoVQnqaA==}
     dev: false
@@ -2653,6 +2654,14 @@ packages:
       sisteransi: 1.0.5
     dev: false
 
+  /prop-types/15.8.1:
+    resolution: {integrity: sha512-oj87CgZICdulUohogVAR7AjlC0327U4el4L6eAvOqCeudMDVU0NThNaV+b9Df4dXgSP1gXMTnPdhfe/2qDH5cg==}
+    dependencies:
+      loose-envify: 1.4.0
+      object-assign: 4.1.1
+      react-is: 16.13.1
+    dev: false
+
   /property-information/6.2.0:
     resolution: {integrity: sha512-kma4U7AFCTwpqq5twzC1YVIDXSqg6qQK6JN0smOw8fgRy1OkMi0CYSzFmsy6dnqSenamAtj0CyXMUJ1Mf6oROg==}
     dev: false
@@ -2668,6 +2677,10 @@ packages:
       loose-envify: 1.4.0
       react: 18.2.0
       scheduler: 0.23.0
+    dev: false
+
+  /react-is/16.13.1:
+    resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==}
     dev: false
 
   /react/18.2.0:
