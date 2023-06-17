@@ -1,8 +1,14 @@
 ---
+import { Header } from "../components/Header";
 import Sidebar from "../components/SideBar";
 import Base from "../layouts/Base.astro";
 ---
 
 <Base>
-	<Sidebar />
+	<div class="flex">
+		<Sidebar />
+		<div class="w-full">
+			<Header />
+		</div>
+	</div>
 </Base>

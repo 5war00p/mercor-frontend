@@ -67,7 +67,7 @@ function classNames(...classes: string[]) {
 
 const Sidebar: FC = () => {
   return (
-    <div className="w-[250.5px] h-screen flex grow flex-col gap-y-5 overflow-hidden border-r bg-white border-[#DBDBDB]">
+    <div className="max-w-[250.5px] h-full flex flex-col gap-y-5 border-r bg-white border-[#DBDBDB]">
       <div className="flex py-8 shrink-0 items-center border-b border-[#DBDBDB] px-6">
         <Colorfilter color="#5030E5" variant="Bulk" size={"24px"} />
         <p className="ml-2 text-xl font-semibold leading-6">Project M.</p>
