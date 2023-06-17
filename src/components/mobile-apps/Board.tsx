@@ -78,7 +78,7 @@ export const Board: FC = () => {
     },
   ]);
   const changeTaskStatus = useCallback(
-    (title, columnID) => {
+    (title: string, columnID: ColumnType) => {
       let task = tasks.find((task) => task.title === title) as CardProps;
       const taskIndex = tasks.indexOf(task);
       let newTasks = update(tasks, {
