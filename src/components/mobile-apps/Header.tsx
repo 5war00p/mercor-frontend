@@ -20,14 +20,14 @@ export const Header: FC = () => {
           <Plus className="w-[30px] h-[30px] rounded-md m-auto" />
         </button>
         <p className="text-[#5030E5] ml-[8.5px] m-auto font-medium">Invite</p>
-        <dl className="flex w-full flex-none justify-between gap-x-8 sm:w-auto ml-3 mr-12">
+        <dl className="flex w-full flex-none justify-between gap-x-8 sm:w-auto ml-3">
           <div className="flex -space-x-0.5">
             <dt className="sr-only">Commenters</dt>
             {[...Array(5).keys()].map((invitee) => (
               <dd key={invitee.toString()}>
                 <img
                   className="h-[38px] w-[38px] rounded-full bg-gray-50 ring-2 ring-white"
-                  src={`/invites/${invitee}.png`}
+                  src={`/people/${invitee}.png`}
                   alt={invitee.toString()}
                 />
               </dd>

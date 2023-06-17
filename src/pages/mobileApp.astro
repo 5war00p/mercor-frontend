@@ -6,7 +6,7 @@ import Base from "../layouts/Base.astro";
 ---
 
 <Base>
-    <div class="flex flex-col mt-[41.5px] ml-[48.5px]">
+    <div class="flex flex-col mt-[41.5px] ml-[48.5px] mb-5 mr-12">
         <Header />
         <SubHeader />
         <div class="flex space-x-[15px]">
@@ -15,18 +15,103 @@ import Base from "../layouts/Base.astro";
                 cardCount={4}
                 separatorColor="#5030E5"
                 indicatorColor="#5030E5"
+                cardProps={[
+                    {
+                        priorityStatus: "Low",
+                        title: "Brainstorming",
+                        description:
+                            "Brainstorming brings team members' diverse experience into play.",
+                        commentCount: 12,
+                        fileCount: 0,
+                        subscriberImages: [
+                            "/people/0.png",
+                            "/people/3.png",
+                            "/people/2.png",
+                        ],
+                    },
+                    {
+                        priorityStatus: "High",
+                        title: "Research",
+                        description:
+                            "User research helps you to create an optimal product for users.",
+                        commentCount: 10,
+                        fileCount: 3,
+                        subscriberImages: ["/people/1.png", "/people/5.png"],
+                    },
+                    {
+                        priorityStatus: "High",
+                        title: "Wireframes",
+                        description:
+                            "Low fidelity wireframes include the most basic content and visuals.",
+                        commentCount: 4,
+                        fileCount: 2,
+                        subscriberImages: [
+                            "/people/0.png",
+                            "/people/5.png",
+                            "/people/3.png",
+                        ],
+                    },
+                ]}
             />
             <Column
                 title="On Progress"
                 cardCount={3}
                 separatorColor="#FFA500"
                 indicatorColor="#FFA500"
+                cardProps={[
+                    {
+                        priorityStatus: "Low",
+                        title: "Brainstorming",
+                        images: ["/cardImages/onprogress-1.png"],
+                        commentCount: 14,
+                        fileCount: 15,
+                        subscriberImages: [
+                            "/people/2.png",
+                            "/people/3.png",
+                            "/people/0.png",
+                        ],
+                    },
+                    {
+                        priorityStatus: "Low",
+                        title: "Moodboard",
+                        images: [
+                            "/cardImages/onprogress-2-1.png",
+                            "/cardImages/onprogress-2-2.png",
+                        ],
+                        commentCount: 9,
+                        fileCount: 10,
+                        subscriberImages: ["/people/2.png"],
+                    },
+                ]}
             />
             <Column
                 title="Done"
                 cardCount={2}
                 separatorColor="#8BC48A"
                 indicatorColor="#76A5EA"
+                cardProps={[
+                    {
+                        priorityStatus: "Completed",
+                        title: "Mobile App Design",
+                        images: ["/cardImages/done-1.png"],
+                        commentCount: 12,
+                        fileCount: 15,
+                        subscriberImages: ["/people/5.png", "/people/3.png"],
+                    },
+                    {
+                        priorityStatus: "Completed",
+                        title: "Design System",
+                        description:
+                            "It just needs to adapt the UI from what you did before",
+                        commentCount: 12,
+                        fileCount: 15,
+                        subscriberImages: [
+                            "/people/0.png",
+                            "/people/2.png",
+                            "/people/3.png",
+                        ],
+                    },
+                ]}
             />
         </div>
     </div>

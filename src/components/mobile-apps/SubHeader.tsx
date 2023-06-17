@@ -37,7 +37,7 @@ export const SubHeader: FC = () => {
         </button>
       </div>
       <div className="mx-5 border-l border-[#787486]"></div>
-      <div className="flex gap-[22px] mr-12">
+      <div className="flex gap-[22px]">
         <button onClick={() => null}>
           <Equals />
         </button>

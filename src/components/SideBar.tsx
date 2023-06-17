@@ -61,7 +61,7 @@ function classNames(...classes: string[]) {
 
 const Sidebar: FC<{ currentPage: string }> = ({ currentPage }) => {
   return (
-    <div className="max-w-[250.5px] h-full flex flex-col gap-y-5 border-r bg-white border-[#DBDBDB]">
+    <div className="max-w-[250.5px] flex flex-col gap-y-5 border-r bg-white border-[#DBDBDB]">
       <div className="flex py-8 shrink-0 items-center border-b border-[#DBDBDB] px-6">
         <Colorfilter color="#5030E5" variant="Bulk" size={"24px"} />
         <p className="ml-2 text-xl font-semibold leading-6">Project M.</p>
@@ -121,7 +121,7 @@ const Sidebar: FC<{ currentPage: string }> = ({ currentPage }) => {
               ))}
             </ul>
           </li>
-          <li className="-mx-6 mt-auto p-6">
+          <li className="-mx-6 mt-auto p-5">
             <div className="relative h-[200px] rounded-2xl bg-[#F5F5F5]">
               <div className="absolute -top-9 left-16 w-[66px] h-[66px] rounded-full bg-[#F5F5F5]">
                 <div className="relative mx-auto mt-4 h-[33px] w-[33px] rounded-full bg-[#FCD64A] bg-opacity-70 blur-lg"></div>
