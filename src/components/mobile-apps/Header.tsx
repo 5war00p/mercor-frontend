@@ -5,14 +5,20 @@ import { Plus } from "../icons/Plus";
 
 export const Header: FC = () => {
   return (
-    <div className="flex mt-[41.5px] ml-[48.5px] ">
+    <div className="flex">
       <p className="text-3xl font-semibold mr-[21.5px]">Mobile App</p>
       <div className="flex space-x-[17px]">
-        <Pencil className="w-[30px] h-[30px] rounded-md m-auto" />
-        <Link className="w-[30px] h-[30px] rounded-md m-auto" />
+        <button onClick={() => null}>
+          <Pencil className="w-[30px] h-[30px] rounded-md m-auto" />
+        </button>
+        <button onClick={() => null}>
+          <Link className="w-[30px] h-[30px] rounded-md m-auto" />
+        </button>
       </div>
       <div className="flex ml-auto">
-        <Plus className="w-[30px] h-[30px] rounded-md m-auto" />
+        <button onClick={() => null}>
+          <Plus className="w-[30px] h-[30px] rounded-md m-auto" />
+        </button>
         <p className="text-[#5030E5] ml-[8.5px] m-auto font-medium">Invite</p>
         <dl className="flex w-full flex-none justify-between gap-x-8 sm:w-auto ml-3 mr-12">
           <div className="flex -space-x-0.5">
